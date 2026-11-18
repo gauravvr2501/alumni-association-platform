@@ -16,7 +16,7 @@ function Events() {
     try {
       const token = localStorage.getItem('token');
       const res = await axios.post(
-        `http://localhost:5000/api/events/register/${eventId}`,
+        `https://alumni-association-backend.onrender.com/api/events/register/${eventId}`,
         {},
         {
           headers: {
