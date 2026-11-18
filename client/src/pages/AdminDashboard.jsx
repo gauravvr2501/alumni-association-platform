@@ -30,43 +30,43 @@ export default function AdminDashboard() {
   useEffect(() => {
     // Common fetch for dashboard cards
     if (activePage === "home") {
-      axios.get("http://localhost:5000/api/alumni")
+      axios.get("https://alumni-association-backend.onrender.com/api/alumni")
         .then(res => setAlumni(res.data))
         .catch(err => console.error("Error fetching alumni:", err));
 
-      axios.get("http://localhost:5000/api/jobs/admin/applications")
+      axios.get("https://alumni-association-backend.onrender.com/api/jobs/admin/applications")
         .then(res => setApplications(res.data))
         .catch(err => console.error("Error fetching job applications:", err));
 
-      axios.get("http://localhost:5000/api/donations")
+      axios.get("https://alumni-association-backend.onrender.com/api/donations")
         .then(res => setDonations(res.data))
         .catch(err => console.error("Error fetching donations:", err));
 
-      axios.get("http://localhost:5000/api/events/event-registrations")
+      axios.get("https://alumni-association-backend.onrender.com/api/events/event-registrations")
         .then(res => setEventRegistrations(res.data))
         .catch(err => console.error("Error fetching event registrations:", err));  
     }
 
     if (activePage === "manageAlumni") {
-      axios.get("http://localhost:5000/api/alumni")
+      axios.get("https://alumni-association-backend.onrender.com/api/alumni")
         .then(res => setAlumni(res.data))
         .catch(err => console.error("Error fetching alumni:", err));
     }
 
     if (activePage === "jobApplications") {
-      axios.get("http://localhost:5000/api/jobs/admin/applications")
+      axios.get("https://alumni-association-backend.onrender.com/api/jobs/admin/applications")
         .then(res => setApplications(res.data))
         .catch(err => console.error("Error fetching job applications:", err));
     }
 
     if (activePage === "donationManagement") {
-      axios.get("http://localhost:5000/api/donations")
+      axios.get("https://alumni-association-backend.onrender.com/api/donations")
         .then(res => setDonations(res.data))
         .catch(err => console.error("Error fetching donations:", err));
     }
 
     if (activePage === "eventRegistrations") {
-      axios.get("http://localhost:5000/api/events/event-registrations")
+      axios.get("https://alumni-association-backend.onrender.com/api/events/event-registrations")
         .then(res => setEventRegistrations(res.data))
         .catch(err => console.error("Error fetching event registrations:", err));
 }
@@ -85,7 +85,7 @@ export default function AdminDashboard() {
       };
   
    
-  await axios.post("http://localhost:5000/api/jobs/add", newJob);
+  await axios.post("https://alumni-association-backend.onrender.com/api/jobs/add", newJob);
 
       setJobSuccessMsg("Job added successfully!");
       // Clear form fields
@@ -115,7 +115,7 @@ export default function AdminDashboard() {
         date: eventDate,
       };
 
-      await axios.post("http://localhost:5000/api/events/add-event", newEvent);
+      await axios.post("https://alumni-association-backend.onrender.com/api/events/add-event", newEvent);
 
       setEventSuccessMsg("Event added successfully!");
       setEventTitle("");

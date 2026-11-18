@@ -17,7 +17,7 @@ export default function Donation() {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/donations",
+        "https://alumni-association-backend.onrender.com/api/donations",
         {
           cause,
           amount: parseInt(amount),

@@ -16,7 +16,7 @@ useEffect(() => {
         return;
       }
 
-      const res = await axios.get("http://localhost:5000/api/alumni/check", {
+      const res = await axios.get("https://alumni-association-backend.onrender.com/api/alumni/check", {
         headers: { Authorization: `Bearer ${token}` }
       });
 

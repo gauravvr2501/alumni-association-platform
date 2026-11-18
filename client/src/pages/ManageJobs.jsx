@@ -15,7 +15,7 @@ const ManageJobs = () => {
 
   const fetchApplications = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/jobs/admin/applications');
+      const response = await axios.get('https://alumni-association-backend.onrender.com/api/jobs/admin/applications');
       setApplications(response.data);
       setLoading(false);
     } catch (error) {
@@ -38,7 +38,7 @@ const ManageJobs = () => {
   const handleAddJob = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/jobs', formData);
+      await axios.post('https://alumni-association-backend.onrender.com/api/jobs', formData);
       setSuccessMsg("✅ Job added successfully!");
       setShowForm(false);
       setFormData({ title: '', description: '', location: '', deadline: '' });

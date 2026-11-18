@@ -13,7 +13,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:5000/api/alumni/login", {
+      const res = await axios.post("https://alumni-association-backend.onrender.com/api/alumni/login", {
         email,
         password,
       });

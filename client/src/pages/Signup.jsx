@@ -24,7 +24,7 @@ export default function Signup() {
     setSuccess("");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/alumni/signup", form);
+      const res = await axios.post("https://alumni-association-backend.onrender.com/api/alumni/signup", form);
       setSuccess("Signup successful!");
 
       // ✅ Save alumniId to localStorage

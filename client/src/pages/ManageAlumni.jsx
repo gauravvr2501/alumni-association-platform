@@ -7,7 +7,7 @@ const ManageAlumni = () => {
   useEffect(() => {
     const fetchAlumni = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/admin/all-alumni");
+        const response = await axios.get("https://alumni-association-backend.onrender.com/api/admin/all-alumni");
         setAlumniList(response.data);
       } catch (error) {
         console.error("Error fetching alumni:", error);

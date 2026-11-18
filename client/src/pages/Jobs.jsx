@@ -14,7 +14,7 @@ const Jobs = () => {
 
   const fetchJobs = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/jobs');
+      const res = await axios.get('https://alumni-association-backend.onrender.com/api/jobs');
       setJobs(res.data);
     } catch (err) {
       console.error('Error fetching jobs:', err);
@@ -25,7 +25,7 @@ const Jobs = () => {
     const token = localStorage.getItem('token');
     try {
       const res = await axios.post(
-        'http://localhost:5000/api/jobs/apply-job',
+        'https://alumni-association-backend.onrender.com/api/jobs/apply-job',
         { jobId },
         { headers: { Authorization: `Bearer ${token}` } }
       );

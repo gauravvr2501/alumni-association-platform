@@ -7,7 +7,7 @@ function Events() {
   const [registeredEventIds, setRegisteredEventIds] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/events/all-events')
+    axios.get('https://alumni-association-backend.onrender.com/api/events/all-events')
       .then(res => setEvents(res.data))
       .catch(err => console.log(err));
   }, []);
